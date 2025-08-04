@@ -62,12 +62,12 @@ This portfolio serves as a digital identity hub showcasing **projects, skills, a
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/PaulKioko420/paul-kioko-portfolio.git
+   git clone https://github.com/PaulKioko420/Paul-Kioko-Portfolio-Website.git
    ```
 2. Navigate to the folder:
 
    ```bash
-   cd paul-kioko-portfolio
+   cd Paul-Kioko-Portfolio-Website
    ```
 3. Open `index.html` in your browser or drag the file into VS Code and use **Live Server**.
 
@@ -75,7 +75,7 @@ This portfolio serves as a digital identity hub showcasing **projects, skills, a
 
 ## 🌐 Live Demo
 
-👉 [Check out the Live Portfolio]( https://paulkioko420.github.io/paul-kioko-portfolio/) 
+👉 [Check out the Live Portfolio]( https://paulkioko420.github.io/Paul-kioko-Portfolio-Website/) 
 
 ---
 
@@ -137,4 +137,5 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 > 🔖 *Note: The contact form is frontend-only. Backend services like Formspree, EmailJS, or Netlify Forms can be integrated for production.*
+
 
