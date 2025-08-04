@@ -1,0 +1,964 @@
+
+/* ================ */
+    /* CSS Reset & Base Styles */
+    /* ================ */
+    
+    /* CSS variables for consistent theming */
+    :root {
+      --primary-color: #00ffcc;        /* Main accent color */
+      --dark-bg: #161b22;             /* Dark background color */
+      --medium-bg: #1d2828;           /* Medium background color */
+      --light-text: #c9d1d9;          /* Light text color */
+      --white: #ffffff;               /* Pure white */
+      --section-padding: 5rem 2rem;   /* Standard section padding */
+    }
+    
+    /* Universal reset for consistent styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;         /* Include padding in element dimensions */
+    }
+    
+    /* Base body styles */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--dark-bg);
+      color: var(--white);
+      line-height: 1.6;              /* Improved readability */
+    }
+    
+    /* Link styling */
+    a {
+      text-decoration: none;          /* Remove underlines */
+      color: inherit;                 /* Inherit text color */
+    }
+    
+    /* Image responsiveness */
+    img {
+      max-width: 100%;                /* Prevent overflow */
+      height: auto;                   /* Maintain aspect ratio */
+    }
+    
+    /* ================ */
+    /* Utility Classes */
+    /* ================ */
+    
+    /* Container for centered content with max-width */
+    .container {
+      width: 100%;
+      max-width: 1200px;              /* Maximum content width */
+      margin: 0 auto;                 /* Center horizontally */
+      padding: 0 1rem;                /* Side padding */
+    }
+    
+    /* Section title styling with decorative underline */
+    .section-title {
+      position: relative;             /* For absolute positioning of children */
+      text-align: center;
+      margin-bottom: 3rem;            /* Space below title */
+    }
+    
+    /* Section heading */
+    .section-title h2 {
+      color: var(--light-text);
+      font-size: 2rem;
+      font-weight: bold;
+      position: relative;             /* For pseudo-elements */
+      display: inline-block;          /* Allow underline to match text width */
+    }
+    
+    /* Decorative underline */
+    .underline {
+      height: 4px;
+      width: 80px;
+      background-color: var(--primary-color);
+      margin: 0.5rem auto 0;          /* Centered with top margin */
+      border-radius: 2px;
+      position: relative;
+    }
+    
+    /* Large background text for visual effect */
+    .background-text {
+      font-size: 6rem;
+      color: rgba(64, 64, 64, 0.3);   /* Semi-transparent */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Perfect centering */
+      z-index: 0;                     /* Behind content */
+      white-space: nowrap;            /* Prevent line breaks */
+    }
+    
+    /* Button styling */
+    .btn {
+      display: inline-block;
+      border: 2px solid var(--primary-color);
+      padding: 0.6rem 1.2rem;
+      border-radius: 25px;             /* Pill shape */
+      color: var(--light-text);
+      font-weight: bold;
+      transition: all 0.3s ease;      /* Smooth hover effects */
+    }
+    
+    /* Button hover state */
+    .btn:hover {
+      background-color: var(--primary-color);
+      color: #000;                    /* Dark text on light background */
+    }
+    
+    /* ================ */
+    /* Header & Navigation */
+    /* ================ */
+    
+    /* Navigation bar */
+    .navbar {
+      width: 100%;
+      background: rgba(1, 1, 1, 0.7); /* Semi-transparent black */
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;  /* Space between logo and nav */
+      align-items: center;
+      position: fixed;                /* Sticky header */
+      top: 0;
+      z-index: 1000;                  /* Ensure header stays on top */
+      backdrop-filter: blur(5px);      /* Frosted glass effect */
+    }
+    
+    /* Logo styling */
+    .logo h2 a {
+      color: var(--primary-color);
+      font-size: 2rem;
+    }
+    
+    /* Navigation links container */
+    .nav-links {
+      list-style: none;               /* Remove bullets */
+      display: flex;
+      gap: 1.5rem;                    /* Space between links */
+    }
+    
+    /* Individual navigation links */
+    .nav-links li a {
+      color: var(--light-text);
+      font-weight: bold;
+      position: relative;             /* For underline effect */
+    }
+    
+    /* Animated underline effect */
+    .nav-links li a::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary-color);
+      transition: width 0.3s ease;    /* Smooth width transition */
+    }
+    
+    /* Hover state for underline */
+    .nav-links li a:hover::after {
+      width: 70%;                     /* Partial width underline */
+    }
+    
+    /* Hover state for link color */
+    .nav-links li a:hover {
+      color: var(--primary-color);
+    }
+    
+    /* ================ */
+    /* Hero Section */
+    /* ================ */
+    
+    /* Full viewport hero section */
+    .hero {
+      height: 100vh;                  /* Full viewport height */
+      background: url('Images/boitumelo-o_tcYADlSt8-unsplash.jpg') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;        /* Vertical centering */
+      align-items: center;             /* Horizontal centering */
+      text-align: center;
+      position: relative;
+      padding: 0 1rem;
+    }
+    
+    /* Dark overlay for better text contrast */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(1, 1, 1, 0.7); /* Dark overlay */
+      z-index: 1;                     /* Above background, below content */
+    }
+    
+    /* Ensure hero content is above overlay */
+    .hero > * {
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Hero content container */
+    .hero-content {
+      max-width: 800px;               /* Optimal reading width */
+    }
+    
+    /* Hero heading */
+    .hero-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    /* Intro text with accent color */
+    .intro {
+      color: var(--primary-color);
+    }
+    
+    /* Subheading */
+    .hero-content h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    /* Hero paragraph text */
+    .hero-content p {
+      font-size: 1rem;
+      color: var(--light-text);
+      margin-bottom: 1rem;
+    }
+    
+    /* Small phrase text */
+    .phrase {
+      font-size: 0.9rem;
+      color: var(--light-text);
+      margin-bottom: 1rem;
+    }
+    
+    /* Typewriter animation effect */
+    .typewriter {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      color: var(--primary-color);
+      width: 0;
+      animation: typing 5s steps(38, end) infinite alternate, blink 1s step-end infinite;
+    }
+    
+    /* Typewriter animation keyframes */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    /* Cursor blink animation */
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+    
+    /* Social media icons */
+    .social-icons {
+      display: flex;
+      gap: 1.5rem;                    /* Space between icons */
+      margin-top: 2rem;               /* Space above icons */
+    }
+    
+    /* Social icon styling */
+    .social-icons a {
+      color: var(--white);
+      font-size: 2rem;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    
+    /* Social icon hover effects */
+    .social-icons a:hover {
+      transform: scale(1.1);          /* Slight enlargement */
+      color: var(--primary-color);
+    }
+    
+    /* ================ */
+    /* About Section */
+    /* ================ */
+    
+    /* About section styling */
+    .about {
+      background-color: var(--medium-bg);
+      padding: var(--section-padding);
+      position: relative;
+    }
+    
+    /* Flex container for about content */
+    .about-container {
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    
+    /* Text content area */
+    .about-text {
+      flex: 1 1 55%;                  /* 55% of container width */
+    }
+    
+    /* About heading */
+    .about-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    
+    /* About paragraph text */
+    .about-text p {
+      color: var(--light-text);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    
+    /* Highlighted text */
+    .highlight {
+      color: var(--primary-color);
+    }
+    
+    /* Right side content */
+    .about-right {
+      flex: 1 1 40%;                  /* 40% of container width */
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;                    /* Space between elements */
+    }
+    
+    /* Code block styling */
+    .code-block {
+      background-color: var(--dark-bg);
+      padding: 1rem;
+      border-radius: 12px;
+      font-family: 'Courier New', Courier, monospace; /* Monospace for code */
+      font-size: 0.85rem;
+      color: var(--light-text);
+      overflow-x: auto;               /* Horizontal scroll if needed */
+    }
+    
+    /* Syntax highlighting colors */
+    .code-block span {
+      color: #f92672;                 /* Function names */
+    }
+    
+    .code-block span:nth-child(2) {
+      color: #66d9ef;                 /* Variables */
+    }
+    
+    /* Contact info card */
+    .contact-card {
+      background-color: var(--medium-bg);
+      border-radius: 12px;
+      padding: 1.2rem;
+      color: var(--light-text);
+      border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    }
+    
+    /* Contact info items */
+    .contact-card p {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;                    /* Space between icon and text */
+      margin-bottom: 0.8rem;
+    }
+    
+    /* Contact card icons */
+    .contact-card i {
+      color: var(--primary-color);
+      width: 20px;                    /* Consistent icon width */
+    }
+    
+    /* ================ */
+    /* Education Section */
+    /* ================ */
+    
+    .education-section {
+      background-color: var(--medium-bg);
+      padding: var(--section-padding);
+      position: relative;
+    }
+    
+    /* Education items container */
+    .education-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;                      /* Space between items */
+      margin-top: 3rem;
+    }
+    
+    /* Individual education item */
+    .education-item {
+      background-color: var(--dark-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+    
+    /* Education institution */
+    .education-item h3 {
+      color: var(--primary-color);
+      margin-bottom: 0.3rem;
+    }
+    
+    /* Education date */
+    .education-date {
+      font-size: 0.9rem;
+      color: #7f8c8d;                 /* Muted color */
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+    
+    /* Education description */
+    .education-item p {
+      color: var(--light-text);
+      font-size: 0.95rem;
+    }
+    
+    /* CV download button container */
+    .download-btn-container {
+      text-align: center;
+      margin-top: 3rem;
+    }
+    
+    /* Download button styling */
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;                    /* Space between icon and text */
+      padding: 0.8rem 1.5rem;
+      background-color: var(--primary-color);
+      color: #000;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+    
+    /* Download button hover effect */
+    .download-btn:hover {
+      transform: translateY(-3px);     /* Slight lift */
+    }
+    
+    /* ================ */
+    /* Interests Section */
+    /* ================ */
+    
+    .interests {
+      background-color: var(--medium-bg);
+      padding: var(--section-padding);
+      position: relative;
+    }
+    
+    /* Grid layout for interest cards */
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;                      /* Space between cards */
+      margin-top: 3rem;
+    }
+    
+    /* Individual interest card */
+    .interests-card {
+      background-color: var(--dark-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      transition: transform 0.3s ease; /* Hover animation */
+    }
+    
+    /* Card hover effect */
+    .interests-card:hover {
+      transform: translateY(-5px);     /* Lift effect */
+    }
+    
+    /* Interest icon */
+    .interests-card .icon {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    
+    /* Interest title */
+    .interests-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    
+    /* Interest description */
+    .interests-card p {
+      color: var(--light-text);
+      font-size: 0.95rem;
+    }
+    
+    /* ================ */
+    /* Skills Section */
+    /* ================ */
+    
+    .skills-section {
+      background-color: var(--medium-bg);
+      padding: var(--section-padding);
+      text-align: center;
+    }
+    
+    /* Grid layout for skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1.5rem;                    /* Space between skill cards */
+      max-width: 800px;               /* Limit width */
+      margin: 2rem auto 0;            /* Centered with top margin */
+    }
+    
+    /* Individual skill card */
+    .skill-card {
+      background-color: var(--dark-bg);
+      padding: 1.5rem 1rem;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;                    /* Space between elements */
+      transition: transform 0.3s ease; /* Hover animation */
+    }
+    
+    /* Skill card hover effect */
+    .skill-card:hover {
+      transform: translateY(-5px);     /* Lift effect */
+    }
+    
+    /* Skill icon/image */
+    .skill-card img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;            /* Maintain aspect ratio */
+    }
+    
+    /* Skill name */
+    .skill-card span {
+      font-size: 1rem;
+      color: var(--light-text);
+    }
+    
+    /* ================ */
+    /* Projects Section */
+    /* ================ */
+    
+    .projects {
+      background-color: var(--medium-bg);
+      padding: var(--section-padding);
+      position: relative;
+    }
+    
+    /* Grid layout for projects */
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;                      /* Space between projects */
+      margin-top: 3rem;
+    }
+    
+    /* Individual project card */
+    .project-card {
+      background-color: var(--dark-bg);
+      border-radius: 12px;
+      overflow: hidden;               /* Contain child elements */
+      transition: transform 0.3s ease; /* Hover animation */
+    }
+    
+    /* Project card hover effect */
+    .project-card:hover {
+      transform: translateY(-8px);     /* Lift effect */
+    }
+    
+    /* Project image */
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;               /* Crop to fit */
+    }
+    
+    /* Project content area */
+    .project-content {
+      padding: 1.5rem;
+    }
+    
+    /* Project title */
+    .project-content h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Project description */
+    .project-content p {
+      color: var(--light-text);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    
+    /* Technologies heading */
+    .project-content h4 {
+      font-size: 0.9rem;
+      color: #8b949e;                 /* Muted color */
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Technology tags container */
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;                /* Allow wrapping */
+      gap: 0.5rem;                    /* Space between tags */
+    }
+    
+    /* Individual technology tag */
+    .tech-tags span {
+      background-color: #21262d;
+      color: var(--primary-color);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;             /* Pill shape */
+      font-size: 0.8rem;
+    }
+    
+    /* ================ */
+    /* Contact Section */
+    /* ================ */
+    
+    .contact-section {
+      background-color: var(--medium-bg);
+      padding: var(--section-padding);
+    }
+    
+    /* Flex container for contact content */
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;                /* Allow wrapping on small screens */
+      gap: 2rem;                      /* Space between columns */
+      max-width: 1000px;              /* Limit width */
+      margin: 0 auto;                 /* Center horizontally */
+      justify-content: center;        /* Center columns */
+    }
+    
+    /* Contact info column */
+    .contact-info {
+      flex: 1 1 400px;                /* Flexible width, min 400px */
+      background-color: var(--dark-bg);
+      padding: 2rem;
+      border-radius: 12px;
+    }
+    
+    /* Contact form column */
+    .contact-form {
+      flex: 1 1 400px;                /* Flexible width, min 400px */
+      background-color: var(--dark-bg);
+      padding: 2rem;
+      border-radius: 12px;
+    }
+
+    
+    /* Contact section heading */
+    .contact-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Contact subtitle */
+    .subtitle {
+      color: #8b949e;                 /* Muted color */
+      margin-bottom: 1.5rem;
+    }
+    
+    /* Contact method item */
+    .contact-method {
+      display: flex;
+      align-items: center;
+      gap: 1rem;                      /* Space between icon and text */
+      margin: 1.5rem 0;
+    }
+    
+    /* Contact method icon */
+    .contact-method .icon {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+    }
+    
+    /* Social connect text */
+    .connect-text {
+      margin-top: 2rem;
+      font-weight: bold;
+    }
+    
+    /* Remove default borders from form elements */
+    form input,
+    form textarea,
+    form select {
+    border: none; /* or border-color: transparent; */
+    outline: none; /* removes focus outline */
+    }
+    
+    /* Set the blinking text cursor (caret) to bright cyan */
+    input,
+    textarea {
+    caret-color: #00ffcc; /* Bright cyan */
+   }
+
+    
+    /* Social media icons */
+    .social-icons-2 {
+      display: flex;
+      gap: 1rem;                      /* Space between icons */
+      margin-top: 1rem;
+    }
+    
+    /* Social icon styling */
+    .social-icons-2 a {
+      color: var(--white);
+      font-size: 1.8rem;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    
+    /* Social icon hover effect */
+    .social-icons-2 a:hover {
+      transform: scale(1.1);          /* Slight enlargement */
+      color: var(--primary-color);
+    }
+    
+    /* Form label styling */
+    .contact-form label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    /* Form input fields */
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      background-color: #0d1117;
+      color: var(--white);
+      font-family: inherit;           /* Use body font */
+    }
+    
+    /* Textarea specific styling */
+    .contact-form textarea {
+      height: 150px;
+      resize: vertical;               /* Allow vertical resizing */
+    }
+    
+    /* Submit button */
+    .contact-form button {
+      margin-top: 1.5rem;
+      background-color: var(--white);
+      color: #000;
+      border: none;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;                    /* Space between icon and text */
+      transition: all 0.3s ease;
+    }
+    
+    /* Submit button hover effect */
+    .contact-form button:hover {
+      background-color: var(--primary-color);
+    }
+    
+    /* ================ */
+    /* Footer */
+    /* ================ */
+    
+    .footer {
+      background-color: var(--dark-bg);
+      padding: 3rem 0 1rem;
+    }
+    
+    /* Grid layout for footer content */
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;                      /* Space between columns */
+      max-width: 1200px;              /* Limit width */
+      margin: 0 auto;                 /* Center horizontally */
+      padding: 0 1rem;                /* Side padding */
+    }
+    
+    /* Footer about section */
+    .footer-about h3 {
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Footer about text */
+    .footer-about p {
+      color: var(--light-text);
+      margin-bottom: 1rem;
+    }
+    
+    /* Footer section headings */
+    .footer-links h4,
+    .footer-contact h4 {
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary-color);
+      display: inline-block;
+    }
+    
+    /* Links list */
+    .footer-links ul {
+      list-style: none;               /* Remove bullets */
+    }
+    
+    /* List items */
+    .footer-links li {
+      margin: 0.8rem 0;
+    }
+    
+    /* Footer links */
+    .footer-links a {
+      color: var(--light-text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;                    /* Space between icon and text */
+      transition: color 0.3s ease;
+    }
+    
+    /* Footer link hover effect */
+    .footer-links a:hover {
+      color: var(--primary-color);
+    }
+    
+    /* Contact info items */
+    .footer-contact p {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;                    /* Space between icon and text */
+      margin: 0.8rem 0;
+      color: var(--light-text);
+    }
+    
+    /* Footer copyright section */
+    .footer-bottom {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #2d2f36;  /* Top border */
+      color: #7f8c8d;                 /* Muted text color */
+    }
+    
+    /* ================ */
+    /* Scroll Behavior */
+    /* ================ */
+    
+    /* Smooth scrolling for anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Offset for fixed header */
+    section {
+      scroll-margin-top: 80px;
+    }
+    
+    /* ================ */
+    /* Animations */
+    /* ================ */
+    
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Apply animation when section is targeted */
+    section:target {
+      animation: fadeIn 1s ease-in-out;
+    }
+    
+    /* ================ */
+    /* Responsive Styles */
+    /* ================ */
+    
+    /* Large tablets and small laptops */
+    @media (max-width: 1024px) {
+      /* Reduce background text size */
+      .background-text {
+        font-size: 5rem;
+      }
+    }
+    
+    /* Tablets */
+    @media (max-width: 768px) {
+      /* Further reduce background text */
+      .background-text {
+        font-size: 4rem;
+      }
+      
+      /* Hide desktop navigation */
+      .nav-links {
+        display: none;
+      }
+      
+      /* Stack about section content */
+      .about-container {
+        flex-direction: column;
+      }
+      
+      /* Adjust hero text sizes */
+      .hero-content h2 {
+        font-size: 2rem;
+      }
+      
+      .hero-content h1 {
+        font-size: 1.5rem;
+      }
+      
+      /* Adjust download button spacing */
+      .download-btn-container {
+        margin-top: 2rem;
+      }
+    }
+    
+    /* Mobile devices */
+    @media (max-width: 480px) {
+      /* Smallest background text */
+      .background-text {
+        font-size: 3rem;
+      }
+      
+      /* Reduce section title size */
+      .section-title h2 {
+        font-size: 1.5rem;
+      }
+      
+      /* Adjust hero text sizes */
+      .hero-content h2 {
+        font-size: 1.8rem;
+      }
+      
+      /* Adjust navbar padding */
+      .navbar {
+        padding: 1rem;
+      }
+      
+      /* Adjust section padding */
+      section {
+        padding: 4rem 1rem;
+      }
+      
+      /* Adjust contact form spacing */
+      .contact-container {
+        gap: 1.5rem;
+      }
+      
+      /* Adjust contact form padding */
+      .contact-info,
+      .contact-form {
+        padding: 1.5rem;
+      }
+    }

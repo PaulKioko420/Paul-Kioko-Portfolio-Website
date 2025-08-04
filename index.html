@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic meta tags for character encoding and responsive viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Page title displayed in browser tab -->
+  <title>Paul Kioko's Portfolio</title>
+  
+  <!-- External resources: Font Awesome icons and Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+
+</head>
+<body>
+  <!-- ================ -->
+  <!-- Header/Navigation -->
+  <!-- ================ -->
+  <header class="navbar">
+    <div class="logo">
+      <h2><a href="#hero">pk</a></h2>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education-section">Education</a></li>
+        <li><a href="#skills">Interests</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="btn">Contact Me</a>
+  </header>
+
+  <!-- ================ -->
+  <!-- Hero Section -->
+  <!-- ================ -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <p class="phrase">LET'S TURN YOUR VISION INTO REALITY, TOGETHER.</p>
+      <h2>Hi, I am <span class="intro">Paul Kioko</span></h2>
+      <p>I am an aspiring</p>
+      <h1><span class="typewriter">Full Stack Software Engineer.</span></h1>
+      <p class="bio">
+        I'm an aspiring full-stack developer with a foundational understanding of HTML, CSS, and JavaScript basics. 
+        I'm currently learning more advanced concepts and exploring tools like React, Node.js, and Django. 
+        I enjoy building responsive web pages and am eager to grow by collaborating on real-world projects.
+      </p>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/paul-matuku-17662533b/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/PaulKioko420" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
+
+  <!-- ================ -->
+  <!-- About Section -->
+  <!-- ================ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-title">
+        <h1 class="background-text">ABOUT ME</h1>
+        <h2>Who am I?</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="about-container">
+        <div class="about-text">
+          <h3>I'm <span class="highlight">Paul Kioko</span>,<br>a Full Stack Software Engineer</h3>
+          <p>
+            I'm an aspiring full stack software engineer with a growing passion for building clean, responsive, and user-focused websites. I currently work with the core building blocks of the web HTML, CSS, and JavaScript to create structured layouts and interactive designs that adapt well to all screen sizes.
+          </p>
+          <p>
+            As I continue to deepen my knowledge, I'm actively exploring modern frameworks and backend technologies to become a well-rounded developer. I'm focused on learning how the frontend and backend can work together to create smooth, functional experiences for users.
+          </p>
+          <p>
+            I believe in writing code that is both purposeful and easy to maintain. My goal is to grow into a developer who builds smart solutions that solve real problems one line of code at a time.
+          </p>
+        </div>
+
+        <div class="about-right">
+          <div class="code-block">
+<pre>
+<span>function</span> HelloWorld() {
+  <span>const</span> [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log("Component mounted");
+    return () => {
+      console.log("Cleanup");
+    };
+  }, []);
+
+  return (
+    &lt;div className="container"&gt;
+      &lt;h1&gt;Hello, World!&lt;/h1&gt;
+      &lt;p&gt;Count: {count}&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(c =&gt; c + 1)}&gt;Add&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</pre>
+          </div>
+
+          <div class="contact-card">
+            <p><i class="fas fa-user"></i> Paul Kioko</p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:matukupaul1@gmail.com">matukupaul1@gmail.com</a></p>
+            <p><i class="fas fa-location-dot"></i> Nairobi, Kenya</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================ -->
+  <!-- Education Section -->
+  <!-- ================ -->
+  <section class="education-section" id="education-section">
+    <div class="container">
+      <div class="section-title">
+        <h1 class="background-text">EDUCATION</h1>
+        <h2>Where did I learn?</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="education-container">
+        <div class="education-item">
+          <h3>Kiserian Junior Seminary</h3>
+          <span class="education-date">2018-2022</span>
+          <p>Graduated from high school with foundational knowledge and skills.</p>
+        </div>
+        <div class="education-item">
+          <h3>Power Learn Project</h3>
+          <span class="education-date">Currently Learning</span>
+          <p>Enrolled in Software Engineering program at Power Learn Project to deepen my development skills.</p>
+        </div>
+      </div>
+      
+      <div class="download-btn-container">
+        <a class="download-btn" href="Paul_Matuku_CV.pdf" download="Paul_Matuku_CV.pdf">
+          <i class="fas fa-download"></i> Download My CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================ -->
+  <!-- Interests Section -->
+  <!-- ================ -->
+  <section class="interests" id="skills">
+    <div class="container">
+      <div class="section-title">
+        <h1 class="background-text">INTERESTS</h1>
+        <h2>What I like</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="interests-grid">
+        <div class="interests-card">
+          <i class="fas fa-code icon"></i>
+          <h3>Frontend Development</h3>
+          <p>
+            I'm passionate about frontend development and the art of bringing web designs to life. Using HTML, CSS, and JavaScript, I enjoy creating responsive, accessible, and visually engaging websites that offer smooth user experiences across devices. I'm constantly exploring how to make interfaces both beautiful and functional.
+          </p>
+        </div>
+
+        <div class="interests-card">
+          <i class="fas fa-server icon"></i>
+          <h3>Backend Development</h3>
+          <p>
+            I'm interested in the inner workings of web applications — how data is stored, processed, and delivered. I'm currently learning backend development, with a focus on database design, API creation, and server-side logic. I'm excited to build scalable, secure systems.
+          </p>
+        </div>
+
+        <div class="interests-card">
+          <i class="fas fa-pen-nib icon"></i>
+          <h3>Content Writing</h3>
+          <p>
+            I'm passionate about crafting clear, relevant, and impactful content that connects with the right audience. I have a strong understanding of the content writing process, from research and structure to tone and SEO optimization.
+          </p>
+        </div>
+
+        <div class="interests-card">
+          <i class="fas fa-database icon"></i>
+          <h3>Database Design</h3>
+          <p>
+            I'm currently exploring the fundamentals of database design and how efficient data storage supports powerful web applications. I'm interested in learning how to structure, organize, and optimize data in a way that maintains integrity and scales with application growth.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================ -->
+  <!-- Skills Section -->
+  <!-- ================ -->
+  <section class="skills-section">
+    <div class="container">
+      <h2 class="section-title">Programming Languages</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img src="Images/html-5-svgrepo-com.svg" alt="HTML" />
+          <span>HTML</span>
+        </div>
+        <div class="skill-card">
+          <img src="Images/css-svgrepo-com.svg" alt="CSS" />
+          <span>CSS</span>
+        </div>
+        <div class="skill-card">
+          <img src="Images/javascript-svgrepo-com.svg" alt="JavaScript" />
+          <span>JavaScript</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================ -->
+  <!-- Projects Section -->
+  <!-- ================ -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-title">
+        <h1 class="background-text">PROJECTS</h1>
+        <h2>My work</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="projects-container">
+        <!-- Project 1: Calculator -->
+        <div class="project-card">
+          <a href="https://paulkioko420.github.io/calculator/" rel="noopener noreferrer">
+            <img src="Images/calculator1.png" alt="Calculator Project" />
+          </a>
+          <div class="project-content">
+            <h3>Calculator</h3>
+            <p>
+              A basic web-based calculator built using HTML, CSS, and JavaScript that performs standard arithmetic operations like addition, subtraction, multiplication, and division.
+            </p>
+            <h4>Technologies</h4>
+            <div class="tech-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Recipe Page -->
+        <div class="project-card">
+          <a href="https://paulkioko420.github.io/Recipe-page-main/" rel="noopener noreferrer">
+            <img src="Images/recipe1.png" alt="Recipe Page Project" />
+          </a>
+          <div class="project-content">
+            <h3>Recipe Page</h3>
+            <p>A static recipe page designed with HTML and CSS that presents ingredients, cooking steps, preparation time, and a featured image in a clean, user-friendly format.</p>
+            <h4>Technologies</h4>
+            <div class="tech-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+          </div> 
+        </div>
+
+        <!-- Project 3: Rock Paper Scissors Game -->
+        <div class="project-card">
+          <a href="https://paulkioko420.github.io/rock-paper-scissors-game/" rel="noopener noreferrer">
+            <img src="Images/rockpaperscissors.png" alt="Rock Paper Scissors Game" />
+          </a>
+          <div class="project-content">
+            <h3>Rock Paper Scissors Game</h3>
+            <p>A browser-based Rock-Paper-Scissors game where users play against the computer. Built using HTML, CSS, and JavaScript.</p>
+            <h4>Technologies</h4>
+            <div class="tech-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================ -->
+  <!-- Contact Section -->
+  <!-- ================ -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Get In Touch</h2>
+        <p>Have a project in mind? Feel free to reach out!</p>
+      </div>
+
+      <div class="contact-container">
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <h3>Paul Kioko</h3>
+          <p class="subtitle">Full Stack Developer</p>
+          <p>I'm always interested in hearing about new projects and opportunities. Let's collaborate to bring your ideas to life!</p>
+
+          <div class="contact-method">
+            <span class="icon"><i class="fas fa-envelope"></i></span>
+            <div>
+              <strong>Email</strong>
+              <p>matukupaul1@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <span class="icon"><i class="fas fa-phone"></i></span>
+            <div>
+              <strong>Phone</strong>
+              <p>0758380563</p>
+            </div>
+          </div>
+
+          <p class="connect-text">Let's Connect:</p>
+          <div class="social-icons-2">
+            <a href="https://www.linkedin.com/in/paul-matuku-17662533b/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/PaulKioko420" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="John Doe" required />
+
+          <label for="email">Your Email</label>
+          <input type="email" id="email" placeholder="john@example.com" required />
+
+          <label for="message">Your Message</label>
+          <textarea id="message" placeholder="Hello, I would like to talk about..." required></textarea>
+
+          <button type="submit">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================ -->
+  <!-- Footer -->
+  <!-- ================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-about">
+          <h3>Paul Kioko</h3>
+          <p>Aspiring developer building creative, user-friendly web experiences with modern tools.</p>
+          <div class="social-icons">
+            <a href="https://github.com/PaulKioko420" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/paul-matuku-17662533b/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#education-section"><i class="fas fa-graduation-cap"></i> Education</a></li>
+            <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="#skills"><i class="fas fa-code"></i> Interests</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-phone"></i> +254 758 380 563</p>
+          <p><i class="fas fa-envelope"></i> matukupaul1@gmail.com</p>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Paul Kioko. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
