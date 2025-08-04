@@ -188,7 +188,7 @@ section {
 /* Full viewport hero section */
 .hero {
   height: 100vh;                  /* Full viewport height */
-  background: url('Images/boitumelo-o_tcYADlSt8-unsplash.jpg') no-repeat center center/cover;
+  background: url('boitumelo-o_tcYADlSt8-unsplash.jpg') no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;        /* Vertical centering */
@@ -960,3 +960,4 @@ section:target {
     padding: 1.5rem;
   }
 }
+
