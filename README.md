@@ -75,7 +75,7 @@ This portfolio serves as a digital identity hub showcasing **projects, skills, a
 
 ## 🌐 Live Demo
 
-👉 [Check out the Live Portfolio]( https://paulkioko420.github.io/Paul-kioko-Portfolio-Website/) 
+👉 [Check out the Live Portfolio]( https://paulkioko420.github.io/paul-kioko-portfolio-website/) 
 
 ---
 
@@ -137,5 +137,6 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 > 🔖 *Note: The contact form is frontend-only. Backend services like Formspree, EmailJS, or Netlify Forms can be integrated for production.*
+
 
 
